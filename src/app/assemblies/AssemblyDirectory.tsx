@@ -9,7 +9,7 @@ import {
   Clock,
   ArrowRight,
 } from 'lucide-react';
-import { assembliesData, districts } from '../../data/assemblies';
+import { assembliesData, districts, getDistrictMinister } from '../../data/assemblies';
 
 export default function LocalAssembliesPage({
   initialDistrict = 'All Districts',
@@ -115,8 +115,15 @@ export default function LocalAssembliesPage({
 
         {/* 6. ASSEMBLIES GRID */}
         {filteredAssemblies.length > 0 ? (
+          <div className="space-y-14">
+            {districts.filter((d) => d !== 'All Districts' && filteredAssemblies.some((x) => x.district === d)).map((d) => (
+              <div key={d}>
+                <div className="mb-6 border-b border-stone-200 pb-3">
+                  <h3 className="font-serif text-2xl font-bold text-[#1C0D0D]">{d}</h3>
+                  <p className="mt-1 text-xs font-semibold text-[#8B2621]">District Minister: {getDistrictMinister(d)}</p>
+                </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredAssemblies.map((assembly) => (
+            {filteredAssemblies.filter((x) => x.district === d).map((assembly) => (
             <div 
               key={assembly.id} 
               className="bg-[#F6F2EC] rounded-2xl overflow-hidden border border-stone-200/70 hover:shadow-md transition duration-200 flex flex-col"
@@ -161,6 +168,9 @@ export default function LocalAssembliesPage({
                 </Link>
               </div>
             </div>
+            ))}
+          </div>
+              </div>
             ))}
           </div>
         ) : (
