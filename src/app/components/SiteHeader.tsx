@@ -75,10 +75,10 @@ export default function SiteHeader() {
                 <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" />
               </button>
               <div className="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50">
-                <Link href="/ministries#youth-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Youth</Link>
-                <Link href="/ministries#womens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Women</Link>
-                <Link href="/ministries#mens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Men</Link>
-                <Link href="/ministries#childrens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Children</Link>
+                <Link href="/ministries/youth" className="block px-4 py-2 hover:bg-amber-50/60 transition">Youth</Link>
+                <Link href="/ministries/women" className="block px-4 py-2 hover:bg-amber-50/60 transition">Women</Link>
+                <Link href="/ministries/men" className="block px-4 py-2 hover:bg-amber-50/60 transition">Men</Link>
+                <Link href="/ministries/children" className="block px-4 py-2 hover:bg-amber-50/60 transition">Children</Link>
               </div>
             </div>
 
@@ -89,6 +89,7 @@ export default function SiteHeader() {
               </button>
               <div className="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50">
                 <Link href="/sermons" className="block px-4 py-2 hover:bg-amber-50/60 transition">Sermons</Link>
+                <Link href="/media/events" className="block px-4 py-2 hover:bg-amber-50/60 transition">Events</Link>
               </div>
             </div>
 
@@ -132,14 +133,14 @@ export default function SiteHeader() {
               <Link href="/assemblies" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Assemblies</Link>
 
               <p className="px-3 pt-3 text-xs font-bold uppercase tracking-widest text-amber-700">Ministries</p>
-              <Link href="/#events" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Events</Link>
-              <Link href="/ministries#youth-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Youth</Link>
-              <Link href="/ministries#womens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Women</Link>
-              <Link href="/ministries#mens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Men</Link>
-              <Link href="/ministries#childrens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Children</Link>
+              <Link href="/ministries/youth" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Youth</Link>
+              <Link href="/ministries/women" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Women</Link>
+              <Link href="/ministries/men" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Men</Link>
+              <Link href="/ministries/children" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Children</Link>
 
               <p className="px-3 pt-3 text-xs font-bold uppercase tracking-widest text-amber-700">Media</p>
               <Link href="/sermons" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Sermons</Link>
+              <Link href="/media/events" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Events</Link>
               <Link href="/#visit" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Contact</Link>
               <Link
                 href="/#visit"
