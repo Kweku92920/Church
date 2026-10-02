@@ -69,17 +69,21 @@ export default function LeadershipPage() {
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {leaders.map((leader) => (
-            <article key={leader.name} className="flex flex-col overflow-hidden rounded-2xl border border-stone-200/70 bg-[#F6F2EC] transition duration-200 hover:shadow-md">
-              <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-950 to-stone-800">
-                <span aria-hidden="true" className="font-serif text-5xl font-bold tracking-widest text-amber-100/80">
-                  {leader.name.split(' ').filter((part) => part !== 'Pastor').map((part) => part[0]).join('').slice(0, 2)}
-                </span>
-              </div>
-              <div className="flex flex-grow flex-col p-6">
-                <h3 className="font-serif text-xl font-bold text-[#1C0D0D]">{leader.name}</h3>
-                <p className="mt-1 text-xs font-semibold text-[#8B2621]">{leader.role}</p>
-                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-widest text-stone-400">{leader.location}</p>
-                <p className="mt-4 flex-grow text-xs leading-relaxed text-stone-600">{leader.description}</p>
+            <article key={leader.name} className="group flex flex-col items-center overflow-hidden rounded-2xl border border-stone-200/70 bg-white text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#B8860B] via-amber-400 to-[#8B2621]" />
+              <div className="flex w-full flex-grow flex-col items-center px-6 pb-7 pt-8">
+                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-emerald-950 to-stone-800 ring-4 ring-amber-100 transition group-hover:ring-amber-300">
+                  <span aria-hidden="true" className="font-serif text-3xl font-bold tracking-widest text-amber-100/90">
+                    {leader.name.split(' ').filter((part) => !['Pastor', 'Apostle', 'Dr', 'Col', 'Major'].includes(part)).map((part) => part[0]).join('').slice(0, 2)}
+                  </span>
+                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold leading-snug text-[#1C0D0D]">{leader.name}</h3>
+                <span className="mt-3 inline-block rounded-full bg-[#8B2621]/10 px-3 py-1 text-[11px] font-semibold text-[#8B2621]">{leader.role}</span>
+                <p className="mt-3 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-stone-500">
+                  <span className="h-px w-4 bg-[#B8860B]/50" />
+                  {leader.location}
+                  <span className="h-px w-4 bg-[#B8860B]/50" />
+                </p>
               </div>
             </article>
           ))}

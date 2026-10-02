@@ -12,5 +12,5 @@ export default async function AssembliesPage({
       ? district
       : 'All Districts';
 
-  return <LocalAssembliesPage initialDistrict={selectedDistrict} />;
+  return <LocalAssembliesPage key={selectedDistrict} initialDistrict={selectedDistrict} />;
 }
