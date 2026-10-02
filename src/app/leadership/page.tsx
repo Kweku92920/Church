@@ -1,12 +1,39 @@
 import Link from 'next/link';
 
 const leaders = [
-  { name: 'Pastor Emmanuel Mensah', role: 'Area Head', location: 'LA AREA', description: 'Provides spiritual oversight and leadership across all districts and assemblies in the LA Area.' },
-  { name: 'Pastor Daniel Osei', role: 'Area Secretary', location: 'LA AREA', description: 'Coordinates administrative affairs and supports the Area Head in leadership responsibilities.' },
-  { name: 'Pastor Samuel Appiah', role: 'District Pastor', location: 'CENTRAL LA DISTRICT', description: 'Leads the Central LA District with a heart for urban ministry and community outreach.' },
-  { name: 'Pastor Michael Boateng', role: 'District Pastor', location: 'SOUTH BAY DISTRICT', description: 'Shepherds the South Bay District, focusing on family ministry and discipleship.' },
-  { name: 'Pastor Joseph Kusi', role: 'District Pastor', location: 'SAN FERNANDO VALLEY DISTRICT', description: 'Oversees the San Fernando Valley District and its growing congregation.' },
-  { name: 'Pastor Isaac Owusu', role: 'District Pastor', location: 'ORANGE COUNTY DISTRICT', description: 'Leads ministry across Orange County with a focus on evangelism and outreach.' },
+   { name: 'Apostle Dr Dieudonne Komla Nuekpe', role: 'Area Head', location: 'LA AREA', },
+
+  { name: 'Apostle Dr Col Benjamin Godson Kumi-Woode', role: 'Area Head', location: 'LA BURMA CAMP WC', },
+
+  { name: 'Apostle Anthony Owusu Sekyere', role: 'Area Secretary', location: 'LA PIWC Accra', },
+
+  { name: 'Pastor Augustine Dorman', role: 'District Pastor', location: 'LA LABONE DISTRICT', },
+
+  { name: 'Pastor Daniel K Amuzu', role: 'District Pastor', location: 'LA NIMA DISTRICT', },
+  
+  { name: 'Pastor Edward Owusu Boakye', role: 'District Pastor', location: 'LA AVENOR DISTRICT', },
+
+  { name: 'Pastor Joseph Opuni Frimpong', role: 'District Pastor', location: 'LA KOTOBABI DISTRICT', },
+  { name: 'Pastor Paul Komi Adzigbli', role: 'District Pastor', location: 'LA MAAMOBI DISTRICT', },
+  { name: 'Pastor Sylvester Ayiah', role: 'District Pastor', location: 'LA NIMA ALASKA DISTRICT', },
+  { name: 'Pastor Peter Eshun', role: 'District Pastor', location: 'LA LA DISTRICT', },
+{ name: 'Major Collins Badu Agyapong', role: 'District Pastor', location: 'LA BURMA CAMP', },
+{ name: 'Pastor Mark Mohammed Alhassan', role: 'District Pastor', location: 'LA ABELEMKPE DISTRICT', },
+{ name: 'Pastor Manasseh Kojo Blantyne Nabaku', role: 'District Pastor', location: 'LA CANAAN DISTRICT', },
+{ name: 'Pastor Emmanuel Osei Agyapong', role: 'District Pastor', location: 'LA ADABRAKA DISTRICT', },
+{ name: 'Pastor Paul Odai Laryea', role: 'District Pastor', location: 'DANQUAH WC', },
+{ name: 'Pastor Godwin Ako-Addo', role: 'District Pastor', location: 'LA ALAJO DISTRICT', },
+{ name: 'Pastor Vincent Cudjoe Amuzu', role: 'District Pastor', location: 'MERRY VILLAS DISTRICT', },
+
+{ name: 'Pastor Emmanuel Opoku Mensah', role: 'District Pastor', location: 'LA CAPRICE DISTRICT', },
+{ name: 'Pastor Samuel Nii Engman', role: 'District Pastor', location: 'LA OSU DISTRICT', },
+{ name: 'Pastor Michael Odoi Manieson', role: 'District Pastor', location: 'LA ROMAN RIDGE DISTRICT', },
+{ name: 'Pastor Gordon Ansah', role: 'District Pastor', location: 'LA ACCRA NEWTOWN DISTRICT', },
+{ name: 'Pastor Stephen Osei Nyampong', role: 'District Pastor', location: 'LA KOKOMLEMLE DISTRICT', },
+{ name: 'Pastor Hamza Obuobi Osei', role: 'District Pastor', location: 'LA SOUTH LA DISTRICT', },
+{ name: 'Pastor Daniel Nana Sei Mensah', role: 'District Pastor', location: 'LA PIWC FRENCH', },
+{ name: 'Pastor Jones Dwomoh Amankwah', role: 'District Pastor', location: 'LA ONYAMETEASE WC', }
+  
 ];
 
 export default function LeadershipPage() {
@@ -34,9 +61,8 @@ export default function LeadershipPage() {
           Servant Leaders
           <span className="h-px w-8 bg-[#B8860B]/40" />
         </div>
-        <h2 className="font-serif text-3xl font-bold text-[#1C0D0D] md:text-4xl">Meet the Team</h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-stone-600 md:text-base">
-          Our leaders are committed to shepherding the LA Area with humility, wisdom, and a heart for the Gospel.
+          Our leaders are committed to shepherding the La Area with humility, wisdom, and a heart for the Gospel.
         </p>
       </section>
 
