@@ -10,7 +10,7 @@ import {
   Navigation, 
   ChevronRight 
 } from 'lucide-react';
-import { assembliesData } from '../../../data/assemblies';
+import { assembliesData, getDistrictMinister } from '../../../data/assemblies';
 
 export function generateStaticParams() {
   return assembliesData.map(({ id }) => ({ id }));
@@ -119,6 +119,11 @@ export default async function AssemblyDetailPage({
                 <span className="text-sm md:text-base font-medium text-stone-800">
                   {assembly.pastor}
                 </span>
+              </div>
+              <div className="mt-4 border-t border-stone-200/70 pt-4">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-stone-400">District Minister</p>
+                <p className="mt-1 text-sm font-medium text-[#8B2621]">{getDistrictMinister(assembly.district)}</p>
+                <p className="text-xs text-stone-500">{assembly.district} District</p>
               </div>
             </div>
 
