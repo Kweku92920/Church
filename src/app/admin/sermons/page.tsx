@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Plus, Trash2, Loader2, X, Youtube, ExternalLink } from 'lucide-react';
+import { Plus, Trash2, Loader2, X, Video, ExternalLink } from 'lucide-react';
 
 type Sermon = {
   id: string;
@@ -97,7 +97,7 @@ export default function AdminSermons() {
       {showForm && (
         <form onSubmit={handleSubmit} className="bg-stone-900 border border-stone-800 rounded-2xl p-6 mb-6 space-y-4">
           <div className="flex items-center gap-2 text-amber-500 text-sm font-medium mb-2">
-            <Youtube className="w-4 h-4" />
+            <Video className="w-4 h-4" />
             Paste a YouTube URL — thumbnail is auto-fetched
           </div>
           <div>
