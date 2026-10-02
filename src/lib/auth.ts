@@ -3,8 +3,8 @@ import { cookies } from 'next/headers';
 const SESSION_COOKIE = 'cop_admin_session';
 const SESSION_VALUE = 'authenticated';
 
-export function isAdmin(): boolean {
-  const cookieStore = cookies();
+export async function isAdmin(): Promise<boolean> {
+  const cookieStore = await cookies();
   const session = cookieStore.get(SESSION_COOKIE);
   return session?.value === SESSION_VALUE;
 }

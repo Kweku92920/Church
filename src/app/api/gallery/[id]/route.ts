@@ -8,7 +8,7 @@ export async function DELETE(
   _request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  if (!isAdmin()) {
+  if (!(await isAdmin())) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
   const { id } = await params;

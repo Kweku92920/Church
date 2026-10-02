@@ -2,8 +2,8 @@ import { isAdmin } from '@/lib/auth';
 import AdminLogin from './AdminLogin';
 import AdminShell from './AdminShell';
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  if (!isAdmin()) {
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  if (!(await isAdmin())) {
     return <AdminLogin />;
   }
 
