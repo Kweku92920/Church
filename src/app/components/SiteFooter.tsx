@@ -32,7 +32,6 @@ export default function SiteFooter() {
             <li><Link href="/assemblies" className="hover:text-white transition">Local Assemblies</Link></li>
             <li><Link href="/sermons" className="hover:text-white transition">Sermons</Link></li>
             <li><a href="mailto:info@coplaarea.org" className="hover:text-white transition">Contact</a></li>
-            <li><Link href="/admin" className="hover:text-white transition">Admin</Link></li>
           </ul>
         </div>
         <div>
