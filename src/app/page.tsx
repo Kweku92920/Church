@@ -112,10 +112,10 @@ export default function HomePage() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-800 hover:text-emerald-900 transition"
+                className="group inline-flex items-center space-x-2 text-xs font-bold text-emerald-800 hover:text-emerald-900 transition"
               >
-                <span>Learn more about us</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="group-hover:underline underline-offset-4">Learn more about us</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5" />
               </Link>
             </div>
           </div>

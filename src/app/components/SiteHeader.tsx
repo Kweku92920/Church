@@ -69,7 +69,18 @@ export default function SiteHeader() {
             <Link href="/districts" className="hover:text-emerald-800 transition">Districts</Link>
             <Link href="/assemblies" className="hover:text-emerald-800 transition">Assemblies</Link>
 
-            <Link href="/ministries" className="hover:text-emerald-800 transition">Ministries</Link>
+            <div className="relative group py-2">
+              <button className="flex items-center space-x-1 hover:text-emerald-800 transition focus:outline-none" aria-haspopup="true">
+                <span>Ministries</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50">
+                <Link href="/ministries#youth-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Youth</Link>
+                <Link href="/ministries#womens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Women</Link>
+                <Link href="/ministries#mens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Men</Link>
+                <Link href="/ministries#childrens-ministry" className="block px-4 py-2 hover:bg-amber-50/60 transition">Children</Link>
+              </div>
+            </div>
 
             <div className="relative group py-2">
               <button className="flex items-center space-x-1 hover:text-emerald-800 transition focus:outline-none" aria-haspopup="true">
@@ -122,7 +133,10 @@ export default function SiteHeader() {
 
               <p className="px-3 pt-3 text-xs font-bold uppercase tracking-widest text-amber-700">Ministries</p>
               <Link href="/#events" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Events</Link>
-              <Link href="/#ministries" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Ministries</Link>
+              <Link href="/ministries#youth-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Youth</Link>
+              <Link href="/ministries#womens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Women</Link>
+              <Link href="/ministries#mens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Men</Link>
+              <Link href="/ministries#childrens-ministry" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Children</Link>
 
               <p className="px-3 pt-3 text-xs font-bold uppercase tracking-widest text-amber-700">Media</p>
               <Link href="/sermons" onClick={closeMenu} className="block rounded-lg px-3 py-2.5 hover:bg-amber-50 transition">Sermons</Link>

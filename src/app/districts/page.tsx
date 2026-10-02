@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, MapPin, Users } from 'lucide-react';
+import { assembliesData, districtKey, getDistrictMinister } from '../../data/assemblies';
 
 const districts = [
 
@@ -191,7 +192,9 @@ export default function DistrictListPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {districts.map((district) => (
+          {districts.map((district) => {
+            const locals = assembliesData.filter((a) => a.district === districtKey(district.name));
+            return (
             <article
               key={district.name}
               className="bg-[#F6F2EC] border border-stone-200/70 rounded-2xl p-6 hover:shadow-md transition"
@@ -200,7 +203,7 @@ export default function DistrictListPage() {
                 {district.name}
               </h3>
               <p className="text-xs font-semibold text-[#8B2621] mt-2">
-                {district.pastor}
+                {getDistrictMinister(district.name)}
               </p>
               <div className="space-y-3 text-xs text-stone-600 mt-5">
                 <div className="flex items-start gap-2">
@@ -209,8 +212,13 @@ export default function DistrictListPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-stone-400 shrink-0" />
-                  <span>{district.assemblies} local assemblies</span>
+                  <span>{locals.length} local assemblies</span>
                 </div>
+                <ul className="ml-6 list-disc space-y-1 marker:text-[#B8860B]">
+                  {locals.map((a) => (
+                    <li key={a.id}>{a.name}</li>
+                  ))}
+                </ul>
               </div>
               <Link
                 href={`/assemblies?district=${encodeURIComponent(district.name)}`}
@@ -219,7 +227,8 @@ export default function DistrictListPage() {
                 View assemblies <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </article>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>

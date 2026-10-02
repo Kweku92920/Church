@@ -160,3 +160,34 @@ export const assembliesData: Assembly[] = [
   { id: 'trade-fair-tse-addo', name: 'Tse Addo Assembly', district: 'Trade Fair', location: 'Trade Fair, Accra', pastor: 'Pastor', time: 'Sunday Worship – 9:00 AM' },
   { id: 'trade-fair-wireless', name: 'Wireless Assembly', district: 'Trade Fair', location: 'Trade Fair, Accra', pastor: 'Pastor', time: 'Sunday Worship – 9:00 AM' },
 ];
+// Resident minister of each district (from the Leadership page).
+export const districtMinisters: Record<string, string> = {
+  'Abelemkpe': 'Pastor Mark Mohammed Alhassan',
+  'Accra Newtown': 'Pastor Gordon Ansah',
+  'Adabraka': 'Pastor Emmanuel Osei Agyapong',
+  'Alajo': 'Pastor Godwin Ako-Addo',
+  'Avenor': 'Pastor Edward Owusu Boakye',
+  'Burma Camp WC': 'Major Collins Badu Agyapong',
+  'Canaan': 'Pastor Manasseh Kojo Blantyne Nabaku',
+  'Caprice WC': 'Pastor Emmanuel Opoku Mensah',
+  'Danquah WC': 'Pastor Paul Odai Laryea',
+  'Kokomlemle': 'Pastor Stephen Osei Nyampong',
+  'Kotobabi': 'Pastor Joseph Opuni Frimpong',
+  'Labone': 'Pastor Augustine Dorman',
+  'Maamobi': 'Pastor Paul Komi Adzigbli',
+  'Merry Villas': 'Pastor Vincent Cudjoe Amuzu',
+  'Nima': 'Pastor Daniel K Amuzu',
+  'Nima Alaska': 'Pastor Sylvester Ayiah',
+  'Onyametease WC': 'Pastor Jones Dwomoh Amankwah',
+  'Osu': 'Pastor Samuel Nii Engman',
+  'PIWC Accra': 'Apostle Anthony Owusu Sekyere',
+  'PIWC French': 'Pastor Daniel Nana Sei Mensah',
+  'Roman Ridge': 'Pastor Michael Odoi Manieson',
+  'South La': 'Pastor Hamza Obuobi Osei',
+};
+
+export const districtKey = (name: string) =>
+  name.replace(/ District$/, '').replace('South La WC', 'South La');
+
+export const getDistrictMinister = (district: string) =>
+  districtMinisters[districtKey(district)] ?? 'Minister to be announced';

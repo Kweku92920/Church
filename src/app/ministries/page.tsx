@@ -44,7 +44,8 @@ export default function MinistriesPage() {
           {ministriesData.map((ministry) => (
             <div 
               key={ministry.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-200/70 flex flex-col justify-between"
+              id={ministry.id}
+              className="scroll-mt-24 target:ring-2 target:ring-amber-500 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-200/70 flex flex-col justify-between"
             >
               <div>
                 {/* Image container with overlay badge */}
